@@ -19,7 +19,7 @@ class MyNode
                                                 "panda_joint7"};
      MyNode()
      {
-            command_pub = n.advertise<std_msgs::Float64MultiArray>("/joint_group_position_controller/command", 1000);
+            command_pub = n.advertise<std_msgs::Float64MultiArray>("/joint_group_velocity_controller/command", 1000);
             q0.data.resize(joint_names_.size());
             q0.data={0,0,0,0,0,0,0};
             qf.data.resize(joint_names_.size());
